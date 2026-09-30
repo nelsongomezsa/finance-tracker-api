@@ -1,8 +1,8 @@
 # Finance Tracker API
 
-API REST para el control de ingresos y gastos personales, construida con **Java 17** y **Spring Boot 3**. Permite registrar transacciones categorizadas y consultar un resumen mensual con balance e ingresos/gastos desglosados por categoria.
+API REST para el control de ingresos y gastos personales, construida con **Java 17** y **Spring Boot 3**. Permite registrar transacciones categorizadas y consultar un resumen mensual con balance e ingresos/gastos desglosados por categoría.
 
-## Tecnologias
+## Tecnologías
 
 - Java 17
 - Spring Boot 3 (Web, Data JPA, Validation)
@@ -14,13 +14,13 @@ API REST para el control de ingresos y gastos personales, construida con **Java 
 
 ## Funcionalidades
 
-- CRUD de categorias (ingreso / gasto)
+- CRUD de categorías (ingreso / gasto)
 - CRUD de transacciones
-- Resumen mensual: ingresos totales, gastos totales, balance y desglose por categoria
-- Validacion de datos de entrada y manejo centralizado de errores
-- Documentacion interactiva via Swagger UI
+- Resumen mensual: ingresos totales, gastos totales, balance y desglose por categoría
+- Validación de datos de entrada y manejo centralizado de errores
+- Documentación interactiva vía Swagger UI
 
-## Como ejecutar
+## Cómo ejecutar
 
 Requisitos: Java 17 y Maven.
 
@@ -38,29 +38,29 @@ Para usar MySQL en lugar de H2:
 mvn spring-boot:run -Dspring-boot.run.profiles=mysql
 ```
 
-Configura `DB_USER` y `DB_PASSWORD` como variables de entorno si tu instalacion de MySQL no usa `root` / `root`. La base de datos `finance_tracker` se crea automaticamente si no existe.
+Configura `DB_USER` y `DB_PASSWORD` como variables de entorno si tu instalación de MySQL no usa `root` / `root`. La base de datos `finance_tracker` se crea automáticamente si no existe.
 
-## Documentacion de la API
+## Documentación de la API
 
-Con la aplicacion arrancada: `http://localhost:8080/swagger-ui.html`
+Con la aplicación arrancada: `http://localhost:8080/swagger-ui.html`
 
 ## Endpoints principales
 
-| Metodo | Endpoint | Descripcion |
+| Método | Endpoint | Descripción |
 |---|---|---|
-| GET | `/api/categories` | Lista todas las categorias |
-| POST | `/api/categories` | Crea una categoria |
-| PUT | `/api/categories/{id}` | Actualiza una categoria |
-| DELETE | `/api/categories/{id}` | Elimina una categoria |
+| GET | `/api/categories` | Lista todas las categorías |
+| POST | `/api/categories` | Crea una categoría |
+| PUT | `/api/categories/{id}` | Actualiza una categoría |
+| DELETE | `/api/categories/{id}` | Elimina una categoría |
 | GET | `/api/transactions` | Lista todas las transacciones |
-| POST | `/api/transactions` | Crea una transaccion |
-| PUT | `/api/transactions/{id}` | Actualiza una transaccion |
-| DELETE | `/api/transactions/{id}` | Elimina una transaccion |
-| GET | `/api/transactions/summary?year=2026&month=8` | Resumen del mes: ingresos, gastos, balance y desglose por categoria |
+| POST | `/api/transactions` | Crea una transacción |
+| PUT | `/api/transactions/{id}` | Actualiza una transacción |
+| DELETE | `/api/transactions/{id}` | Elimina una transacción |
+| GET | `/api/transactions/summary?year=2026&month=8` | Resumen del mes: ingresos, gastos, balance y desglose por categoría |
 
 ## Ejemplo de uso
 
-Crear una categoria:
+Crear una categoría:
 
 ```bash
 curl -X POST http://localhost:8080/api/categories \
@@ -68,7 +68,7 @@ curl -X POST http://localhost:8080/api/categories \
   -d '{"name": "Nomina", "type": "INCOME"}'
 ```
 
-Crear una transaccion:
+Crear una transacción:
 
 ```bash
 curl -X POST http://localhost:8080/api/transactions \
@@ -88,14 +88,14 @@ curl "http://localhost:8080/api/transactions/summary?year=2026&month=8"
 mvn test
 ```
 
-Incluye tests unitarios de la capa de servicio con Mockito (incluyendo el calculo del resumen mensual y sus totales por categoria) y tests de la capa web con MockMvc, cubriendo tanto el flujo correcto como la validacion de errores.
+Incluye tests unitarios de la capa de servicio con Mockito (incluyendo el cálculo del resumen mensual y sus totales por categoría) y tests de la capa web con MockMvc, cubriendo tanto el flujo correcto como la validación de errores.
 
 ## Estructura del proyecto
 
 ```
 src/main/java/com/nelsongomez/financetracker/
 ├── controller/    # Endpoints REST
-├── service/       # Logica de negocio
+├── service/       # Lógica de negocio
 ├── repository/    # Acceso a datos (Spring Data JPA)
 ├── model/         # Entidades JPA
 ├── dto/           # Records de entrada/salida (DTOs)
@@ -104,4 +104,4 @@ src/main/java/com/nelsongomez/financetracker/
 
 ## Autor
 
-Nelson Gomez Sanchez · Estudiante de DAM y Master en Big Data e IA
+Nelson Gómez Sánchez · Estudiante de DAM y Máster en Big Data e IA

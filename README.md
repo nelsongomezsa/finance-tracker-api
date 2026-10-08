@@ -104,4 +104,4 @@ src/main/java/com/nelsongomez/financetracker/
 
 ## Autor
 
-Nelson Gómez Sánchez · Estudiante de DAM y Máster en Big Data e IA
+Nelson Gómez Sánchez · Estudiante de DAM y Máster en Data & Analytics

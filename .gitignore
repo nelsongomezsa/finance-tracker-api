@@ -24,3 +24,9 @@ target/
 
 .DS_Store
 out/
+
+# Configuración local de herramientas: no se versiona
+.claude/
+CLAUDE.md
+.codex/
+AGENTS.md

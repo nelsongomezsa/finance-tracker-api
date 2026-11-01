@@ -65,7 +65,7 @@ Requisitos: Java 17 y Maven.
    ```
 3. **Pruébala** en Swagger UI: `http://localhost:8080/swagger-ui.html`
 
-Para usar MySQL: `mvn spring-boot:run -Dspring-boot.run.profiles=mysql`, con `DB_USER` y `DB_PASSWORD` como variables de entorno si no usas `root` / `root`. La base `finance_tracker` se crea sola si no existe.
+Para usar MySQL: `mvn spring-boot:run -Dspring-boot.run.profiles=mysql`, con la contraseña en la variable de entorno `DB_PASSWORD` (obligatoria) y el usuario en `DB_USER` (por defecto, `root`). La base `finance_tracker` se crea sola si no existe.
 
 ## Endpoints
 
